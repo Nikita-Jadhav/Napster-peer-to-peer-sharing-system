@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project default="run_createfile">
+
+<target name="run_createfile" depends="compile">
+		<java classname="CreateFiles">
+			<classpath path="dest"/>
+		</java>
+	</target>
+	
+	<target name="run_test" depends="compile">
+		<java classname="Perf_Test">
+			<classpath path="dest"/>
+		</java>
+	</target>
+
+	<target name="compile">
+		<javac includeantruntime="false" srcdir="./" destdir="dest"/>	
+	</target>
+
+</project>

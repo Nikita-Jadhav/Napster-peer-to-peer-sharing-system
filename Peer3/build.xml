@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project default="run">
+	<target name="run" depends="compile">
+		<java classname="PeerServer">
+			<classpath path="dest"/>
+		</java>
+	</target>
+
+	<target name="compile">
+		<javac includeantruntime="false" srcdir="./" destdir="dest"/>	
+	</target>
+
+</project>
